@@ -10,7 +10,7 @@ def tokenize(file_path):
         return tokens
     except FileNotFoundError:
         print(f"Error: file '{file_path}' not found.")
-        return
+        sys.exit(1)
 
 def compute_word_frequencies(tokens):
     freq = defaultdict(int)
