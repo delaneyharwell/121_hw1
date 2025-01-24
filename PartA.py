@@ -19,7 +19,8 @@ def compute_word_frequencies(tokens):
     return dict(freq)
 
 def print_frequencies(freq):
-    sorted_freq = sorted(freq.items(), key=lambda x: ([x[1], x[0]]))
+    print(freq.items())
+    sorted_freq = sorted(freq.items(), key=lambda x: ([-x[1], x[0]]))
     for token, count in sorted_freq:
         print(f"{token} -> {count}")
 
